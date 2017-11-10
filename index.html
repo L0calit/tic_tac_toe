@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet" type="text/css"> -->
+<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+<style>
+    html {
+        background-color: #333333;
+    }
+    .titre {
+        font-family: serif;
+        font-size: 70px;
+        font-weight: bold;
+        color: white;
+        text-align: center;
+    }
+    table {
+        color: white;
+        border-collapse: separate;
+        border-style: dashed;
+        border-spacing: 5px 5px;
+        text-align: center;
+    }
+    .button {
+        float: center;
+        font-size: 90px;
+        height: 100px;
+        width: 100px;
+        background-color: #333333;
+        border-color: #333333;
+        color: white;
+        border-spacing: inherit;
+    }
+    .sous-titre {
+        text-align: center;
+        font-style: italic;
+        font-family: sans-serif;
+        font-size: 20px;
+        color: white;
+    }
+</style>
+
+<head>
+    <title> Tic Tac Toe </title>
+</head>
+
+<script src="tictactoe.js"></script>
+
+<div class="page">
+    <br><br>
+    <div class="titre">
+        Tic Tac Toe
+    </div>
+    <br>
+    <div class="sous-titre">
+        <button onclick="playing(1)">1 player</button>
+        <button onclick="playing(2)">2 players</button>
+    </div>
+    <div class="sous-titre">
+        <button onclick="difficulte(false)">Facile</button>
+        <button onclick="difficulte(true)">Difficile</button>
+    </div>
+    <br>
+    <center>
+        <table>
+            <tr>
+                <th><button class="button" id="0" onclick="choix(0)"></button></th>
+                <th><button class="button" id="1" onclick="choix(1)"></button></th>
+                <th><button class="button" id="2" onclick="choix(2)"></button></th>
+            </tr>
+            <tr>
+                <th><button class="button" id="3" onclick="choix(3)"></button></th>
+                <th><button class="button" id="4" onclick="choix(4)"></button></th>
+                <th><button class="button" id="5" onclick="choix(5)"></button></th>
+            </tr>
+            <tr>
+                <th><button class="button" id="6" onclick="choix(6)"></button></th>
+                <th><button class="button" id="7" onclick="choix(7)"></button></th>
+                <th><button class="button" id="8" onclick="choix(8)"></button></th>
+            </tr>
+        </table>
+        <br>
+        <button onclick="reset()">Reset</button>
+        <button onclick="change_player('O')">O</button>
+        <button onclick="change_player('X')">X</button>
+    </center>
+    <br><br>
+</div>
